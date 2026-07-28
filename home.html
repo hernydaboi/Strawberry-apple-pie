@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Home</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+.card{
+    text-align:center;
+    padding:40px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+}
+
+.link-bubble{
+    display:block;
+    margin:15px auto;
+    padding:15px 25px;
+    border-radius:15px;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.25);
+    color:white;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.link-bubble:hover{
+    background:rgba(255,255,255,0.25);
+    transform:translateY(-3px);
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <h1>Welcome!</h1>
+    <p>You successfully logged in.</p>
+
+<a class="link-bubble" href="links.html">Gaming Files</a>
+<a class="link-bubble" href="directory.html">Student Directory (Doesn't Work)</a>
+
+
+</div>
+
+</body>
+</html>
