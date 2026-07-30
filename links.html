@@ -4,6 +4,27 @@
 <title>Files</title>
 
 <style>
+.search-box{
+    width:100%;
+    max-width:500px;
+}
+
+.search-box input{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    font-size:18px;
+    outline:none;
+    background:rgba(255,255,255,0.15);
+    color:white;
+    backdrop-filter:blur(10px);
+}
+
+.search-box input::placeholder{
+    color:#ddd;
+}
+
 html{
     overflow-y:auto;
 }
@@ -70,10 +91,39 @@ body{
 }
 </style>
 </head>
+<script>
+function searchLinks() {
+    const filter =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const links =
+        document.querySelectorAll(".link-bubble");
+
+    links.forEach(link => {
+        const text =
+            link.textContent.toLowerCase();
+
+        if (text.includes(filter)) {
+            link.style.display = "flex";
+        } else {
+            link.style.display = "none";
+        }
+    });
+}
+</script>
 <body>
 
 <div class="title-card">
     <h1>Gaming Files</h1>
+</div>
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search games..."
+        onkeyup="searchLinks()">
 </div>
 
 <div class="links">
